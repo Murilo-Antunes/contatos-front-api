@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatos</title>
-
+    <script src="js/app.js" defer type="module"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer type="module"></script>
+    
 </head>
 <body>
     <header>
@@ -31,6 +31,9 @@
 
                         <label for="endereco">Endereço:</label>
                         <input type="text" id="endereco" name="endereco" placeholder="Rua. Maringa, 33" required>
+
+                        <label for="foto">Foto:</label>
+                        <input type="text" id="foto" name="foto" placeholder="Coloque a url da foto" required>
                     </div>
                     <button id="salvar" type="submit">Salvar Contato</button>
                 </form>
@@ -45,8 +48,22 @@
                         <th>Endereço</th>
                         <th>Cidade</th>
                         <th>Foto</th>
+                        <th class="acoes-title">Ações</th>
                     </thead>
                     <tbody id="tbody" class="tbody">
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td class="acoes">
+                                <button id="editar" class="editar">Editar</button>
+                                <button id="deletar" class="deletar">Deletar</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </section>

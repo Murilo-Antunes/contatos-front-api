@@ -52,7 +52,7 @@ main div.main-container{
     background-color: #0e0b6b;
     padding: 34px 42px;
     border-radius: 10px;
-    width: min(1120px, 92%);
+    width: min(1700px, 92%);
     gap: 28px;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
     font-weight: bold;
@@ -133,7 +133,7 @@ table{
 }
 
 thead th{
-    text-align: left;
+    text-align: center;
     padding: 16px 14px;
     font-size: 0.92rem;
     color: #F8E76F;
@@ -149,29 +149,45 @@ tbody tr{
 tbody tr td{
     padding: 5px 13px;
     color: #ffffff;
-    vertical-align: middle;
+    text-align: center;
 }
 
 tbody tr td:first-child{
     width: 20px;
 }
 
-tbody tr td:last-child{
-    width: 120px;
+tbody thead:last-child{
+    text-align: left;
 }
 
 tbody tr td button{
-    padding: 10px 14px;
-    border-radius: 999px;
+    width: 50px;
+    height: 30px;
+    padding: 10px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(255, 218, 38, 0.35);
     background: rgba(255, 218, 38, 0.16);
     color: #FFDA26;
     cursor: pointer;
-    font-size: 0.88rem;
+    font-size: 0.7rem;
+    border-radius: 20px;
+}
+
+tbody tr td button.deletar{ 
+    border: 1px solid rgba(255, 81, 38, 0.35);
+    background: rgba(255, 63, 38, 0.16);
+    color: #ff2d26;
+    cursor: pointer;
 }
 
 tbody tr td button:hover{
     background: rgba(255, 218, 38, 0.26);
+}
+
+tbody tr td button.deletar:hover{
+    background: rgba(255, 81, 38, 0.26);
 }
 
 footer{
@@ -183,6 +199,17 @@ footer{
 }
 
 img{
-    width: 50%;
+    width: 10%;
     border-radius: 50%;
 }
+
+.acoes{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.dado-img{
+    width: 50px;
+}
+
