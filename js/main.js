@@ -62,10 +62,12 @@ export const editarContato = async (contato, id) =>{
 
 // ----------------- CHAMAR -----------------
 
-export const chamarPost = (event) =>{
+export const chamarPost = async (event) =>{
     event.preventDefault()
     let contato = montarJson()
-    inserirContato(contato)
+    await inserirContato(contato)
+
+    location.reload()
 }
 
 export const chamarGet = async () =>{
@@ -83,11 +85,11 @@ export const chamarPut = async (contato) =>{
     let id = contato.id
 
     salvar.removeEventListener('click', chamarPost)
-    salvar.addEventListener('click', (event) => { 
+    salvar.addEventListener('click', async (event) => { 
         event.preventDefault()
         let novoContato = montarNovoContato()
-        editarContato(novoContato, id)
-
+        await editarContato(novoContato, id)
+        location.reload()
     })
 }
 
@@ -96,5 +98,8 @@ export const chamarDelete = async (id) =>{
 
     if(confirmacao){
         await deletarContato(id)
+        location.reload()
     }
 }
+
+
